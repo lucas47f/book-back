@@ -21,8 +21,8 @@ public class CrudSpringApplication {
 			bookRepository.deleteAll();
 
 			Books b = new Books();
-			b.setNome("Harry Potter");
-			b.setCategory("Fantasia");
+			b.setName("Harry Potter");
+			b.setCategoria("Fantasia");
 			b.setAutor("J. K. Rowling");
 
 			bookRepository.save(b);

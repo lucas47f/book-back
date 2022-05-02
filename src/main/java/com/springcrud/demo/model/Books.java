@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 
 @Data
@@ -14,13 +16,14 @@ public class Books {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonProperty("_id")
     private long id;
 
     @Column(length = 200, nullable = false)
-    private String nome;
+    private String name;
 
     @Column(length = 20, nullable = false)
-    private String category;
+    private String categoria;
     
     @Column(length = 20, nullable = false)
     private String autor; 
